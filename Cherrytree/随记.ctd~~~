@@ -211,43 +211,4 @@
     }
 }</rich_text>
 	</node>
-	<node custom_icon_id="0" foreground="" is_bold="False" name="Kali 持久加密Usb启动" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1496930911.22" ts_lastsave="1496930996.78" unique_id="2">
-		<rich_text>分区
-工具：parted
-命令行：mkpart
-
-加密分区
-工具：LUKS
-命令行：
-
-a.制作加密分区
-
-cryptsetup --verbose --verify-passphrass luksFormat /dev/sdb3
-
-
-b.打开加密分区
-
-cryptsetup luksOpen /dev/sdb3 usb
-
-
-c.格式化分区
-
-mkfs.ext4 /dev/mapper/usb
-
-
-d.命名卷标
-
-e2label /dev/mapper/usb persistence
-
-
-e.mount 关联usb盘,配置持久加密设置
-
-mkdir -p /mnt/usb
-mount /dev/mapper/usb /mnt/usb
-echo &quot;/ UNION&quot;&gt; /mnt/usb/persistence.conf
-umount /dev/mapper/usb
-cryptsetup luksClose /dev/mapper/usb
-
-</rich_text>
-	</node>
 </cherrytree>

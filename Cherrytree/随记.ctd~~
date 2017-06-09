@@ -211,4 +211,9 @@
     }
 }</rich_text>
 	</node>
+	<node custom_icon_id="0" foreground="" is_bold="False" name="Kali 持久加密Usb启动" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1496930911.22" ts_lastsave="1496930937.03" unique_id="2">
+		<rich_text>分区
+工具：parted
+命令行</rich_text>
+	</node>
 </cherrytree>
